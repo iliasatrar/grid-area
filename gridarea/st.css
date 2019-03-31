@@ -1,0 +1,150 @@
+html, body, h3 {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+header {
+	padding: 2em;
+}
+header, aside {
+	background-color: #39AC11;
+}
+h1, h3 {
+	font-family: sans-serif;
+}
+h1, .title {
+	color: #CFB53B;
+}
+section {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding-bottom: .2em;
+}
+.nr {
+	background-color: #CFB53B;
+	color: #FFF;
+	font-size: 3em;
+	width: 1.2em;
+	text-align: right;
+	padding: .2em;
+}
+article {
+	padding: 1em;
+}
+section img {
+	max-width: 100%;
+}
+aside ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+aside h3 {
+	background-color: #CFB53B;
+	padding: 2em;
+	color: #FFF;
+}
+aside a {
+	text-decoration: none;
+	padding: 2em;
+	display: block;
+}
+aside a:hover {
+	background-color: #CFB53B;
+	color: #FFF;
+}
+footer {
+	background-color: #333;
+	color: #CFB53B;
+	padding: 2em;
+}
+@media screen and (min-width: 760px) {
+	.afbeelding {
+		display: block;
+		background-image: url('foto2.jpg');
+		background-size: cover;
+		background-position: center center;
+	}
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "kop kop"
+		"t1 t2"
+		"t3 t3"
+		"t4 t5"
+		"afb t6"
+		"afb t7"
+		"t8 aside"
+		"t9 aside"
+		"voet voet";
+	}
+	header {
+		grid-area: kop;
+	}
+	.visie {
+		grid-area: t1;
+	}
+	.Haalbare {
+		grid-area: t2;
+	}
+	.Bezuinig {
+		grid-area: t3;
+	}
+	.Inzicht {
+		grid-area: t4;
+	}
+	.afbeelding {
+		grid-area: afb;
+	}
+	.Begin {
+		grid-area: t5;
+	}
+	.Timemanagement {
+		grid-area: t6;
+	}
+	.Spaar {
+		grid-area: t7;
+	}
+	.Handel {
+		grid-area: t8;
+	}
+	.Innoveer{
+		grid-area: t9;
+	}
+	aside {
+		grid-area: aside;
+	}
+	footer {
+		grid-area: voet;
+	}
+
+	h1 {
+		font-size: 2.6em;
+	}
+
+	.Bezuinig2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.Bezuinig2 h3 {
+		grid-column: span 2;
+	}
+	footer {
+		display: grid;
+		grid-template-columns: 1fr auto;
+	}
+}
+@media screen and (min-width: 1000px) {
+	body {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: "kop kop kop"
+		"t1 t1 t1"
+		"t2 t2 t2"
+		"t3 t3 t3"
+		"t4 t5 t5"
+		"t6 t7 afb"
+		"t8 t8 afb"
+		"t9 aside aside"
+		"voet voet voet";
+	}
+}
